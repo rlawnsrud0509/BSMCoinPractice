@@ -1,5 +1,6 @@
 const Color = {
-  indigo: "#002273",
+  indigo: "#00174e",
+  indigoBase: "#0a0d30",
   red: "#ff4a4a",
   blue: "#3571ff",
 

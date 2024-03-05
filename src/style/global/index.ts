@@ -1,18 +1,36 @@
 "use client";
 
 import { createGlobalStyle } from "styled-components";
-import WantedSans from "@/style/global/font/WantedSansVariable.woff2";
+import Pretendard from "@/style/global/font/PretendardVariable.woff2";
 
 const GlobalStyle = createGlobalStyle`
-    body {
+    * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        outline: none;
+    }
+
+    input {
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     @font-face {
-        font-family: "WantedSans";
+        font-family: "Pretendard";
         font-style: normal;
-        src: url(${WantedSans}) format('ttf');
+        src: url(${Pretendard}) format('ttf');
     }
 `;
 
