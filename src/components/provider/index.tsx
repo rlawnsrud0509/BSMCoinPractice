@@ -1,13 +1,16 @@
+"use client";
+
 import GlobalStyle from "@/style/global";
-import { Container } from "react-dom";
-import styled from "styled-components";
+import Header from "../common/header";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <StyledComponentsRegistry>
+      <Header />
       <GlobalStyle />
       {children}
-    </>
+    </StyledComponentsRegistry>
   );
 };
 
