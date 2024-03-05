@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Color from "@/style/color";
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return <Container>{children}</Container>;
@@ -11,8 +12,10 @@ const Container = styled.main`
   width: 100vw;
   min-height: 100vh;
 
+  position: relative;
+
   display: flex;
   justify-content: center;
 
-  padding: 10rem 0;
+  background-color: ${Color.indigoBase};
 `;
