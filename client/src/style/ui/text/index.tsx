@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { Textproptypes } from "@/types/ui/TextProptypes";
 import fonts from "@/style/font";
+import Color from "@/style/color";
 
 type Font = keyof typeof fonts;
 
@@ -8,7 +9,7 @@ const Text = ({
   width = "fit-content",
   height = "fit-content",
   fontType,
-  color = "white",
+  color = Color.gray200,
   textAlign = "center",
   ellipsis = false,
   children,
