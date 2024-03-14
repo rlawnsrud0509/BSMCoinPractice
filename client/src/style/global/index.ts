@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
     button {
         outline: none;
+        cursor: pointer;
     }
 
     input {

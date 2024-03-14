@@ -1,6 +1,6 @@
 "use client";
 
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/common/leftSidebar";
 import { selectedStockAtom } from "@/store";
 import Color from "@/style/color";
 import { AppLayout, Text } from "@/style/ui";
@@ -18,9 +18,8 @@ const Main = () => {
   }, []);
 
   return (
-    <AppLayout color={Color.indigoDark}>
+    <AppLayout color={Color.white}>
       <Container>
-        <Sidebar />
         <StockDetailContainer>
           <Text fontType="Callout">{stockName}</Text>
           <StockgraphBox name={stockName} />
