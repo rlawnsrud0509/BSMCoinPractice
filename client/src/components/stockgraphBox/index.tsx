@@ -13,8 +13,8 @@ import dummy from "@/dummy.json";
 
 const StockgraphBox = ({ name }: { name: string }) => {
   Chart.register(CategoryScale, LinearScale, PointElement, LineElement);
-  Chart.defaults.color = Color.white;
-  Chart.defaults.borderColor = Color.indigoBase;
+  Chart.defaults.color = Color.black;
+  Chart.defaults.borderColor = Color.gray1400;
 
   const chartData = {
     labels: [
@@ -84,8 +84,8 @@ const StockgraphBox = ({ name }: { name: string }) => {
     datasets: [
       {
         label: "",
-        borderColor: Color.white,
-        borderWidth: 2,
+        borderColor: Color.gray200,
+        borderWidth: 3,
         data: dummy.filter((e) => e.name === name)[0]?.value,
         pointStyle: false,
       },
@@ -93,6 +93,18 @@ const StockgraphBox = ({ name }: { name: string }) => {
   };
 
   const chartOptions = {
+    scales: {
+      x: {
+        grid: {
+          color: "transparent",
+        },
+      },
+      y: {
+        grid: {
+          color: "transparent",
+        },
+      },
+    },
     plugins: {
       zoom: {
         pan: {
@@ -126,8 +138,10 @@ const Container = styled.section`
 
   position: relative;
 
+  display: flex;
+
   border-radius: 0.5rem;
 
-  background-color: ${Color.indigoBase};
+  background-color: ${Color.gray1400};
   padding: 1rem;
 `;
