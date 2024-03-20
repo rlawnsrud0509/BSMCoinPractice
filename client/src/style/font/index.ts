@@ -17,7 +17,7 @@ const fonts = {
   HeadLine: fontGenerator(500, 1.5, 1.9),
   Callout: fontGenerator(500, 1.4, 1.7),
   SubHead: fontGenerator(500, 1.3, 1.5),
-  Footnote: fontGenerator(400, 1.2, 1.4),
+  Footnote: fontGenerator(600, 1.2, 1.4),
   Caption: fontGenerator(400, 1.1, 1.3),
   Route: fontGenerator(500, 1.1, 1.3),
   Small: fontGenerator(400, 0.9, 1.1),

@@ -30,6 +30,7 @@ const Container = styled.div<{ fontType: Font }>`
   display: flex;
 
   position: relative;
+  color: white;
 
   ${({ fontType }) => fonts[fontType]};
 `;

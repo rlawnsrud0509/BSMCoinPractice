@@ -31,6 +31,7 @@ const Container = styled.div<{ fontType: Font }>`
   flex-direction: column;
 
   position: relative;
+  color: white;
 
   ${({ fontType }) => fonts[fontType]};
 `;

@@ -9,7 +9,7 @@ const Text = ({
   width = "fit-content",
   height = "fit-content",
   fontType,
-  color = Color.gray200,
+  color = Color.gray1400,
   textAlign = "center",
   ellipsis = false,
   children,
@@ -28,6 +28,10 @@ const Text = ({
 export default Text;
 
 const Container = styled.div<{ fontType: Font; ellipsis: boolean }>`
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+
   ${({ fontType }) => fonts[fontType]};
   ${({ ellipsis }) =>
     ellipsis

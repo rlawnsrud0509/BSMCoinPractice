@@ -46,7 +46,7 @@ const Container = styled.section`
   border-radius: 0.5rem;
 
   color: ${Color.white};
-  background-color: ${Color.gray1400};
+  background-color: ${Color.gray200};
 `;
 
 const ChangeInfoButton = styled.button`

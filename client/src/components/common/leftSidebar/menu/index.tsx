@@ -36,7 +36,7 @@ const Container = styled.section`
 
   position: relative;
   border-radius: 0.5rem;
-  background-color: ${Color.gray1400};
+  background-color: ${Color.gray200};
 
   &::before {
     content: "나의 주식";
