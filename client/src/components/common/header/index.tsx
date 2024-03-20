@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      {!(pathname === "/main") && (
+      {!(pathname === "/stock") && (
         <Container>
           <Row gap="3rem">
             <Link href="/">
