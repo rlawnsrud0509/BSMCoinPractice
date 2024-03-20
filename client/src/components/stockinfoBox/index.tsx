@@ -22,7 +22,13 @@ const StockinfoBox = ({
 
   return (
     <Container background={Color[textColor]} onClick={() => setStockname(name)}>
-      <Text width="5rem" textAlign="left" ellipsis fontType="Small">
+      <Text
+        width="5rem"
+        textAlign="left"
+        ellipsis
+        fontType="Small"
+        color={Color.white}
+      >
         {name}
       </Text>
       <Row width="100%" fontType="Small">
@@ -62,13 +68,13 @@ const Container = styled.div<{ background: CSSProperties["backgroundColor"] }>`
 
   ${fonts.Caption};
   color: white;
-  background-color: ${({ background }) => background + "25"};
+  background-color: ${({ background }) => background + "77"};
   cursor: pointer;
 
   transition: ease-in-out 0.15s;
 
   &:hover {
-    background-color: ${({ background }) => background + "50"};
+    background-color: ${({ background }) => background + "99"};
     transform: scale(1.02);
   }
 `;
