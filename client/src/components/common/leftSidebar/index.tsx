@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ProfileBox from "./profileBox";
 import Sidebarmenu from "./menu";
 
-const Sidebar = () => {
+const LeftSidebar = () => {
   return (
     <Container>
       <SidebarHeader>
@@ -16,7 +16,7 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default LeftSidebar;
 
 const Container = styled.section`
   width: 20rem;
@@ -31,7 +31,7 @@ const Container = styled.section`
   padding: 1.5rem;
   box-sizing: border-box;
 
-  background-color: ${Color.white};
+  background-color: ${Color.gray300};
   z-index: 2;
 `;
 
