@@ -1,6 +1,6 @@
 import { closeModalAnimation, showModalAnimation } from "@/style/animation/modalAnimation";
 import Color from "@/style/color";
-import CrossIcon from "@/style/svg/crossline";
+import { Crossline } from "@/style/svg";
 import ModalLayout from "@/style/ui/layout/modalLayout";
 import { BuyStockModalProptypes } from "@/types/components/BuyStockModalProptypes";
 import React from "react";
@@ -12,7 +12,7 @@ const BuyStockModal = ({ state, closeModal }: BuyStockModalProptypes) => {
       <ModalLayout brightness="60%" animationState={state.animationState}>
         <Container animationState={state.animationState}>
           <CloseModalButton onClick={closeModal}>
-            <CrossIcon width={1} height={1} />
+            <Crossline width={1} height={1} />
           </CloseModalButton>
         </Container>
       </ModalLayout>
