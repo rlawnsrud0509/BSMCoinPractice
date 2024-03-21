@@ -7,16 +7,16 @@ export const useModal = (initialState: boolean) => {
   });
 
   const showModal = () => {
-    setIsOpen({ ...isOpen, state: !isOpen.state });
+    setIsOpen({ ...isOpen, animationState: true });
     setTimeout(() => {
-      setIsOpen({ ...isOpen, animationState: !isOpen.animationState });
+      setIsOpen({ ...isOpen, state: true });
     }, 250);
   };
 
   const closeModal = () => {
-    setIsOpen({ ...isOpen, state: !isOpen.state });
+    setIsOpen({ ...isOpen, animationState: false });
     setTimeout(() => {
-      setIsOpen({ ...isOpen, animationState: !isOpen.animationState });
+      setIsOpen({ ...isOpen, state: false });
     }, 250);
   };
 
