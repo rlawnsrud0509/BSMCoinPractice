@@ -1,7 +1,7 @@
 import {
-  closeModalAnimation,
-  showModalAnimation,
-} from "@/style/animation/modalAnimation";
+  closeModalLayoutAnimation,
+  showModalLayoutAnimation,
+} from "@/style/animation/modalLayoutAnimation";
 import { ModalLayoutProptypes } from "@/types/ui/ModalLayoutProptypes";
 import React from "react";
 import styled, { css } from "styled-components";
@@ -20,6 +20,8 @@ const Container = styled.div<ModalLayoutProptypes>`
   top: 0;
   left: 0;
 
+  z-index: 100;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +31,8 @@ const Container = styled.div<ModalLayoutProptypes>`
     backdrop-filter: brightness(${brightness});
   `};
 
-  ${({ modalState }) => css`
+  ${({ animationState }) => css`
     animation: 0.25s ease-in-out
-      ${modalState ? closeModalAnimation : showModalAnimation} forwards;
+      ${animationState ? showModalLayoutAnimation : closeModalLayoutAnimation} forwards;
   `}
 `;
