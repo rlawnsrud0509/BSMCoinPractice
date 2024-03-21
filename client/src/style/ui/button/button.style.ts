@@ -3,19 +3,7 @@ import fonts from "@/style/font";
 import { css } from "styled-components";
 
 export const buttonStyle = {
-  Custom: css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    outline: none;
-    border: none;
-    border-radius: 0.15rem;
-
-    padding: 0.5rem;
-    background-color: ${Color.white};
-    color: ${Color.indigoBase};
-  `,
+  Custom: css``,
   Submit: css`
     display: flex;
     justify-content: center;
@@ -25,7 +13,6 @@ export const buttonStyle = {
     border: none;
     border-radius: 0.15rem;
 
-    padding: 0.5rem;
     background-color: ${Color.white};
     color: ${Color.indigoBase};
   `,
@@ -38,7 +25,6 @@ export const buttonStyle = {
     border: none;
     border-radius: 0.15rem;
 
-    padding: 0.5rem;
     background-color: ${Color.red};
     color: ${Color.white};
     ${fonts.Small}
@@ -52,7 +38,6 @@ export const buttonStyle = {
     border: none;
     border-radius: 0.15rem;
 
-    padding: 0.5rem;
     background-color: ${Color.blue};
     color: ${Color.white};
     ${fonts.Small}

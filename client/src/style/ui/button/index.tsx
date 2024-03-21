@@ -1,37 +1,36 @@
 import fonts from "@/style/font";
-import { ButtonProptypes, ButtonType, Font } from "@/types/ui/ButtonProptypes";
+import { ButtonProptypes } from "@/types/ui/ButtonProptypes";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { buttonStyle } from "./button.style";
+import Color from "@/style/color";
 
-const Button = ({
-  width = "fit-content",
-  height = "fit-content",
-  backgroundColor = "",
-  color = "",
-  fontType = "Route",
-  buttonType = "Buy",
-  padding = "0.5rem",
-  ...restType
-}: ButtonProptypes) => {
-  return (
-    <Container
-      {...restType}
-      style={{ width, height, backgroundColor, color, padding }}
-      fontType={fontType}
-      buttonType={buttonType}
-    ></Container>
-  );
+const Button = (options: ButtonProptypes) => {
+  return <Container {...options}></Container>;
 };
 
 export default Button;
 
-const Container = styled.button<{
-  fontType: Font;
-  buttonType: ButtonType;
-}>`
-  ${({ fontType }) => fonts[fontType]};
-  ${({ buttonType }) => buttonStyle[buttonType]};
+const Container = styled.button<ButtonProptypes>`
+  ${({
+    width = "fit-content",
+    height = "fit-content",
+    backgroundColor = Color.white,
+    color = Color.black,
+    padding = "0.5rem",
+    fontType = "Callout",
+  }) =>
+    css`
+      width: ${width};
+      height: ${height};
+      background-color: ${backgroundColor};
+      color: ${color};
+      padding: ${padding};
+      ${fonts[fontType]};
+    `};
+
+  ${({ buttonType = "Custom" }) => buttonStyle[buttonType]};
+
   transition: 0.15s ease-in;
 
   &:hover {
