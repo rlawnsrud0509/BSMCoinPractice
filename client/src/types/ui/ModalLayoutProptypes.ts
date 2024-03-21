@@ -1,5 +1,5 @@
 export interface ModalLayoutProptypes {
-  modalState: boolean;
+  animationState: boolean;
   brightness?: string;
   blur?: string;
   children: React.ReactNode;
