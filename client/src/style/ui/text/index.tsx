@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Textproptypes } from "@/types/ui/TextProptypes";
-import fonts from "@/style/font";
 import Color from "@/style/color";
+import fonts from "@/style/font";
 
 const Text = (options: Textproptypes) => {
   return <Container {...options}>{options.children}</Container>;
@@ -26,7 +26,7 @@ const Container = styled.div<Textproptypes>`
       height: ${height};
       color: ${color};
       text-align: ${textAlign};
-      ${fontType};
+      ${fonts[fontType]};
     `};
 
   ${({ ellipsis }) =>
