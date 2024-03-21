@@ -1,36 +1,32 @@
 import React from "react";
-import styled from "styled-components";
-import { ColumnContainerProptypes } from "@/types/ui/FlexContainerProptypes";
+import styled, { css } from "styled-components";
+import { ColumnContainerProptypes, RowContainerProptypes } from "@/types/ui/FlexContainerProptypes";
 import fonts from "@/style/font";
 
-type Font = keyof typeof fonts;
-
-const Row = ({
-  width = "fit-content",
-  height = "fit-content",
-  justifyContent = "center",
-  alignItems = "center",
-  gap = "0",
-  fontType = "Footnote",
-  children,
-}: ColumnContainerProptypes) => {
-  return (
-    <Container
-      fontType={fontType}
-      style={{ width, height, justifyContent, alignItems, gap }}
-    >
-      {children}
-    </Container>
-  );
+const Row = (options: ColumnContainerProptypes) => {
+  return <Container {...options}>{options.children}</Container>;
 };
 
 export default Row;
 
-const Container = styled.div<{ fontType: Font }>`
+const Container = styled.div<RowContainerProptypes>`
   display: flex;
 
   position: relative;
   color: white;
-
-  ${({ fontType }) => fonts[fontType]};
+  ${({
+    width = "fit-content",
+    height = "fit-content",
+    justifyContent = "center",
+    alignItems = "center",
+    gap = 0,
+    fontType = "Footnote",
+  }) => css`
+    width: ${width};
+    height: ${height};
+    justify-content: ${justifyContent};
+    align-items: ${alignItems};
+    gap: ${gap};
+    ${fonts[fontType]};
+  `};
 `;
