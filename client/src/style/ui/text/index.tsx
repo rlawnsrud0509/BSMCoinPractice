@@ -3,36 +3,32 @@ import { Textproptypes } from "@/types/ui/TextProptypes";
 import fonts from "@/style/font";
 import Color from "@/style/color";
 
-type Font = keyof typeof fonts;
-
-const Text = ({
-  width = "fit-content",
-  height = "fit-content",
-  fontType,
-  color = Color.gray1400,
-  textAlign = "center",
-  ellipsis = false,
-  children,
-}: Textproptypes) => {
-  return (
-    <Container
-      fontType={fontType}
-      ellipsis={ellipsis}
-      style={{ color, textAlign, width, height }}
-    >
-      {children}
-    </Container>
-  );
+const Text = (options: Textproptypes) => {
+  return <Container {...options}>{options.children}</Container>;
 };
 
 export default Text;
 
-const Container = styled.div<{ fontType: Font; ellipsis: boolean }>`
+const Container = styled.div<Textproptypes>`
   display: flex;
   align-items: center;
   gap: 0.15rem;
 
-  ${({ fontType }) => fonts[fontType]};
+  ${({
+    width = "fit-content",
+    height = "fit-content",
+    color = Color.gray1400,
+    textAlign = "center",
+    fontType,
+  }) =>
+    css`
+      width: ${width};
+      height: ${height};
+      color: ${color};
+      text-align: ${textAlign};
+      ${fontType};
+    `};
+
   ${({ ellipsis }) =>
     ellipsis
       ? css`
