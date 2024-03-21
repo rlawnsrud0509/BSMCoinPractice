@@ -10,9 +10,11 @@ import dummy from "@/dummy.json";
 import StockgraphBox from "@/components/stockgraphBox";
 import LeftSidebar from "@/components/common/leftSidebar";
 import StockTradeBox from "@/components/stockTradeBox";
-
+import { useModal } from "@/hooks/useModal";
+import { BuyStockModal } from "@/components/modal";
 const StockPage = () => {
   const [stockName, setStockname] = useAtom(selectedStockAtom);
+  const { isOpen, showModal, closeModal } = useModal(true);
 
   useEffect(() => {
     setStockname(dummy[0].name);
@@ -21,6 +23,7 @@ const StockPage = () => {
   return (
     <AppLayout color={Color.indigoDark}>
       <LeftSidebar />
+      <BuyStockModal state={isOpen} closeModal={closeModal} />
       <Container>
         <StockDetailContainer>
           <Text width="100%" textAlign="left" fontType="Callout">
