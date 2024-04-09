@@ -1,1 +1,1 @@
-## BSM 모의주식투자!! 가상의돈으로 주식투자를해봐용
+죽엇습니다... https://github.com/BSM-Investment-Simulation/Investment_Frontend 여기로 ㄱㄱ
